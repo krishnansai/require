@@ -1,0 +1,14 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: snow;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.logout{
+  position: flex;
+  justify-content: end;
+  flex-direction: row-reverse;
+}

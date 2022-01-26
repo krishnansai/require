@@ -1,7 +1,8 @@
+import SideBar from "./SideBar";
 const AdminMain = () => {
     return (
         <div>
-        <h1>Admin Main</h1>
+        <SideBar/>
         </div>
     );
     }
