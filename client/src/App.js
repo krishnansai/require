@@ -6,12 +6,15 @@ import {
   Link
 } from "react-router-dom";
 import UserMain from "./components/user/UserMain";
+import { Button } from "@mui/material";
 function App() {
   return (
     <div className="index">
     <Router>
-      <Link to="/admin">Admin_Login</Link>
-      <Link to="/user">user_Login</Link>
+      <div className="btn-group">
+      <Link to="/admin"><Button variant="contained">AdminLogin</Button></Link>
+      <Link to="/user"><Button>UserLogin</Button></Link>
+      </div>
 
     <div className="App">
       <Switch>
@@ -25,6 +28,7 @@ function App() {
         </Switch>
     </div>
     </Router>
+    
     </div>
   );
 }
