@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
 import UserMain from "./components/user/UserMain";
 import { Button } from "@mui/material";
-import Sidebar from "./components/admin/Sidebar";
 import TextField from "@mui/material/TextField";
 import Menu from "./components/admin/Menu.js";
+import LogoutIcon from '@mui/icons-material/Logout';
 function App() {
   const [login, setLogin] = React.useState(false);
   return (
@@ -34,7 +34,7 @@ function App() {
             </div>
           ) : (
             <Link to="/" style={{textAlign:"end"}} onClick={() => setLogin(false)}>
-              <Button  variant="outlined" color="error" className="logout">LogOut</Button>
+              <LogoutIcon />
             </Link>
           )}
         </div>
@@ -46,8 +46,6 @@ function App() {
               <Menu />
               </>
             </Route>
-
-
             <Route path="/user">
               <UserMain />
             </Route>

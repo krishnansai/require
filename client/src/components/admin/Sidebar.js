@@ -1,6 +1,8 @@
 import React from "react";
 import "../../App.css";
 import "./Admin.css";
+import { Button } from "@mui/material";
+
 import History from "./History";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
@@ -10,6 +12,9 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AddLinkIcon from "@mui/icons-material/AddLink";
 
 function Sidebar() {
+  // const sideclick = (e) => {
+  //   console.log(e.value);
+  // };
   return (
     <div className="side">
       <Router>
@@ -24,35 +29,36 @@ function Sidebar() {
           </li>
             // {{val.link == "/history" ? <History /> : null}}
       })} */}
+      
             <div className="colum">
               <div className="sid-row">
               <HomeIcon />
                 <Link to="/history">
-                  <div>onCampus</div>
+                <Button variant="contained" color="success">onCampus</Button>
                 </Link>
               </div>
               <div className="sid-row">
               <AddLinkIcon />
                 <Link to="/history">
-                  <div>OffCampus</div>
-                </Link>
+                <Button variant="contained" color="success">offCampus</Button> 
+                 </Link>
               </div>
               <div className="sid-row">
               <ManageAccountsIcon />
                 <Link to="/history">
-                  <div>details</div>
-                </Link>
+                <Button variant="contained" color="success">Detils</Button>
+                   </Link>
               </div>
               <div className="sid-row">
               <CheckBoxIcon />
                 <Link to="/history">
-                  <div>Eligibility</div>
+                <Button variant="contained" color="success">Eligible</Button>
                 </Link>
               </div>
               <div className="sid-row">
               <HistoryIcon />
                 <Link to="/history">
-                  <div>History</div>
+                <Button variant="contained" value="history" color="success">History</Button>
                 </Link>
               </div>
             </div>
