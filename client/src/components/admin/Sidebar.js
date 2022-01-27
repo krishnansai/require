@@ -10,6 +10,7 @@ import HistoryIcon from "@mui/icons-material/History";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AddLinkIcon from "@mui/icons-material/AddLink";
+import Oncampus from "./Oncampus";
 
 function Sidebar() {
   // const sideclick = (e) => {
@@ -33,7 +34,7 @@ function Sidebar() {
             <div className="colum">
               <div className="sid-row">
               <HomeIcon />
-                <Link to="/history">
+                <Link to="/oncampus">
                 <Button variant="contained" color="success">onCampus</Button>
                 </Link>
               </div>
@@ -66,7 +67,14 @@ function Sidebar() {
         </div>
         <Switch>
           <Route path="/history">
+
             <History />
+
+          </Route>
+          <Route path="/oncampus">
+
+            <Oncampus />
+            
           </Route>
         </Switch>
       </Router>
