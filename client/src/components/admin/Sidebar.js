@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import SideData from "./SideData.js";
 import "./Admin.css";
 import History from "./History";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
