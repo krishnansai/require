@@ -4,16 +4,13 @@ import UserMain from "./components/user/UserMain";
 import { Button } from "@mui/material";
 import Sidebar from "./components/admin/Sidebar";
 import TextField from "@mui/material/TextField";
-
+import Menu from "./components/admin/Menu.js";
 function App() {
   const [login, setLogin] = React.useState(false);
   return (
     <div className="index">
       <Router>
-        <div className="btn-group">
-          {login === false ? (
-            <div onClick={() => setLogin(true)}>
-              <div className="btn-login">
+      {login === false ? <div className="btn-login">
                 <TextField id="filled-basic" label="Gmail" variant="filled" />
                 <br />
                 <TextField
@@ -21,7 +18,11 @@ function App() {
                   label="Password"
                   variant="standard"
                 />
-              </div>
+              </div>:null}
+        <div className="btn-group">
+          {login === false ? (
+            <div onClick={() => setLogin(true)}>
+              
               <Link to="/admin">
                 <Button variant="contained">Admin Login</Button>
               </Link>
@@ -32,8 +33,8 @@ function App() {
               </Link>
             </div>
           ) : (
-            <Link to="/" onClick={() => setLogin(false)}>
-              <Button variant="outlined" color="error" className="logout">LogOut</Button>
+            <Link to="/" style={{textAlign:"end"}} onClick={() => setLogin(false)}>
+              <Button  variant="outlined" color="error" className="logout">LogOut</Button>
             </Link>
           )}
         </div>
@@ -41,8 +42,11 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/admin">
-              <Sidebar />
+              <>
+              <Menu />
+              </>
             </Route>
+
 
             <Route path="/user">
               <UserMain />

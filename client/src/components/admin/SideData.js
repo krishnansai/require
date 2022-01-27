@@ -4,6 +4,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AddLinkIcon from '@mui/icons-material/AddLink';
+import History from './History';
 export const  SideData =[
     {
         title: "onCampus",
@@ -23,14 +24,17 @@ export const  SideData =[
     {
         title: "Eligibility",
         icon: <CheckBoxIcon />,
-        link: "/home"
+        link: "/eligible"
     },
     {
         title: "History",
         icon: <HistoryIcon />,
-        link: "/home"
+        link: "/history"
     }
+    
 ]
+
+
 export default SideData;
 
 // screencontrol id
