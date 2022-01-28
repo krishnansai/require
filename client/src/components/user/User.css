@@ -1,0 +1,22 @@
+.side
+{
+    width: 230xp;
+    height: 500xp;
+    background-color: grey;
+}
+.userside
+{
+    height: 60xp;
+    background-color: grey;
+   color: white;
+   
+    text-align: center;
+}
+.buttons
+{
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    padding-top: 20px;
+    padding-left: 30px;
+}
