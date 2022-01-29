@@ -42,7 +42,6 @@ function Sidebar(props) {
                 </Link>
               </div>
               <div className="sid-row">
-<<<<<<< HEAD
                 <AddLinkIcon />
                 <Link to="/history">
                   <Button variant="contained" color="success">
@@ -57,18 +56,6 @@ function Sidebar(props) {
                     Detils
                   </Button>
                 </Link>
-=======
-              <AddLinkIcon />
-                <Link to="/offcampus">
-                <Button variant="contained" color="success">offCampus</Button> 
-                 </Link>
-              </div>
-              <div className="sid-row">
-              <ManageAccountsIcon />
-                <Link to="/details">
-                <Button variant="contained" color="success">Detils</Button>
-                   </Link>
->>>>>>> 7142b7cc11b27883c6dace0e1627ac92aeb26ef8
               </div>
               <div className="sid-row">
                 <CheckBoxIcon />
