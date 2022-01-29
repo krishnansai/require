@@ -5,6 +5,8 @@ import "./Admin.css";
 import History from "./History.js";
 import Oncampus from "./Oncampus.js";
 import Offcampus from "./Offcampus.js";
+import Eligible from "./Eligible.js";
+import Details from "./Details.js";
 function Menu({ sideData }) {
   return (
     <div className="menu">
@@ -13,26 +15,31 @@ function Menu({ sideData }) {
       </div>
       <Router>
         <div className="menu-div">
-        <div>
-      <Sidebar />
-</div>
-<div>
-        <Switch>
-          <Route path="/history">
-            <History sideData={"callData"} />
-          </Route>
-          <Route path="/oncampus">
-            <Oncampus />
-          </Route>
-          <Route path="/offcampus">
-            <Offcampus />
-          </Route>
-          <Route>
-            <Route path="\Details"></Route>
-          </Route>
-        </Switch>
-        </div>
-
+          <div>
+            <Sidebar />
+          </div>
+          <div>
+            <Switch>
+              <Route path="/history">
+                <History sideData={"callData"} />
+              </Route>
+              <Route path="/oncampus">
+                <Oncampus />
+              </Route>
+              <Route path="/offcampus">
+                <Offcampus />
+              </Route>
+              <Route path="/eligible">
+                <Eligible />
+              </Route>
+              <Route path="/details">
+                <Details />
+              </Route>
+              <Route>
+                <Route path="\Details"></Route>
+              </Route>
+            </Switch>
+          </div>
         </div>
       </Router>
     </div>

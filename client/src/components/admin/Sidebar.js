@@ -2,16 +2,14 @@ import React from "react";
 import "../../App.css";
 import "./Admin.css";
 import { Button } from "@mui/material";
-import Menu from "./Menu.js";
-import History from "./History";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import HistoryIcon from "@mui/icons-material/History";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AddLinkIcon from "@mui/icons-material/AddLink";
-import Oncampus from "./Oncampus";
-import Offcampus from "./Offcampus";
+
 
 function Sidebar(props) {
 
@@ -48,15 +46,15 @@ function Sidebar(props) {
               </div>
               <div className="sid-row">
                 <ManageAccountsIcon />
-                <Link to="/history">
+                <Link to="/details">
                   <Button variant="contained" color="success">
-                    Detils
+                    Details
                   </Button>
                 </Link>
               </div>
               <div className="sid-row">
                 <CheckBoxIcon />
-                <Link to="/history">
+                <Link to="/eligible">
                   <Button variant="contained" color="success">
                     Eligible
                   </Button>
