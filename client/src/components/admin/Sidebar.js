@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 import "./Admin.css";
 import { Button } from "@mui/material";
-
+import Menu from "./Menu.js";
 import History from "./History";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
@@ -14,12 +14,9 @@ import Oncampus from "./Oncampus";
 import Offcampus from "./Offcampus";
 
 function Sidebar(props) {
-  // const sideclick = (e) => {
-  //   console.log(e.value);
-  // };
+
   return (
     <div className="side">
-      <Router>
         <div className="side-list">
           <ul>
             {/* {SideData.map((val, key)=>{
@@ -43,7 +40,7 @@ function Sidebar(props) {
               </div>
               <div className="sid-row">
                 <AddLinkIcon />
-                <Link to="/history">
+                <Link to="/offcampus">
                   <Button variant="contained" color="success">
                     offCampus
                   </Button>
@@ -76,9 +73,9 @@ function Sidebar(props) {
             </div>
           </ul>
         </div>
-        <Switch>
+        {/* <Switch>
           <Route path="/history">
-            <History name="callHistory"/>
+             <History sideData ={"callData"} />
           </Route>
           <Route path="/oncampus">
             <Oncampus />
@@ -89,8 +86,7 @@ function Sidebar(props) {
   <Route>
     <Route path="\Details"></Route>
   </Route>
-        </Switch>
-      </Router>
+        </Switch> */}
     </div>
   );
 }

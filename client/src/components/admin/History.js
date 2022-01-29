@@ -1,8 +1,8 @@
 
-function History() {
+function History(props) {
   return(
        <div>
-            <center><h3>History</h3></center>
+            <center><h3>History{props.sideData}</h3></center>
        </div>
        );
 }
