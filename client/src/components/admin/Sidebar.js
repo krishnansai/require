@@ -12,7 +12,7 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AddLinkIcon from "@mui/icons-material/AddLink";
 import Oncampus from "./Oncampus";
 
-function Sidebar() {
+function Sidebar(props) {
   // const sideclick = (e) => {
   //   console.log(e.value);
   // };
@@ -30,36 +30,46 @@ function Sidebar() {
           </li>
             // {{val.link == "/history" ? <History /> : null}}
       })} */}
-      
+
             <div className="colum">
               <div className="sid-row">
-              <HomeIcon />
+                <HomeIcon />
                 <Link to="/oncampus">
-                <Button variant="contained" color="success">onCampus</Button>
+                  <Button variant="contained" color="success">
+                    onCampus
+                  </Button>
                 </Link>
               </div>
               <div className="sid-row">
-              <AddLinkIcon />
+                <AddLinkIcon />
                 <Link to="/history">
-                <Button variant="contained" color="success">offCampus</Button> 
-                 </Link>
-              </div>
-              <div className="sid-row">
-              <ManageAccountsIcon />
-                <Link to="/history">
-                <Button variant="contained" color="success">Detils</Button>
-                   </Link>
-              </div>
-              <div className="sid-row">
-              <CheckBoxIcon />
-                <Link to="/history">
-                <Button variant="contained" color="success">Eligible</Button>
+                  <Button variant="contained" color="success">
+                    offCampus
+                  </Button>
                 </Link>
               </div>
               <div className="sid-row">
-              <HistoryIcon />
+                <ManageAccountsIcon />
                 <Link to="/history">
-                <Button variant="contained" value="history" color="success">History</Button>
+                  <Button variant="contained" color="success">
+                    Detils
+                  </Button>
+                </Link>
+              </div>
+              <div className="sid-row">
+                <CheckBoxIcon />
+                <Link to="/history">
+                  <Button variant="contained" color="success">
+                    Eligible
+                  </Button>
+                </Link>
+              </div>
+              <div className="sid-row">
+                <HistoryIcon />
+                <Link to="/history">
+                  <Button variant="contained"  color="success">
+                    History
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -67,14 +77,10 @@ function Sidebar() {
         </div>
         <Switch>
           <Route path="/history">
-
-            <History />
-
+            <History name="callHistory"/>
           </Route>
           <Route path="/oncampus">
-
             <Oncampus />
-            
           </Route>
         </Switch>
       </Router>
