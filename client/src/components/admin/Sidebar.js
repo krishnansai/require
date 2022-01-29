@@ -11,6 +11,7 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AddLinkIcon from "@mui/icons-material/AddLink";
 import Oncampus from "./Oncampus";
+import Offcampus from "./Offcampus";
 
 function Sidebar(props) {
   // const sideclick = (e) => {
@@ -41,6 +42,7 @@ function Sidebar(props) {
                 </Link>
               </div>
               <div className="sid-row">
+<<<<<<< HEAD
                 <AddLinkIcon />
                 <Link to="/history">
                   <Button variant="contained" color="success">
@@ -55,6 +57,18 @@ function Sidebar(props) {
                     Detils
                   </Button>
                 </Link>
+=======
+              <AddLinkIcon />
+                <Link to="/offcampus">
+                <Button variant="contained" color="success">offCampus</Button> 
+                 </Link>
+              </div>
+              <div className="sid-row">
+              <ManageAccountsIcon />
+                <Link to="/details">
+                <Button variant="contained" color="success">Detils</Button>
+                   </Link>
+>>>>>>> 7142b7cc11b27883c6dace0e1627ac92aeb26ef8
               </div>
               <div className="sid-row">
                 <CheckBoxIcon />
@@ -82,6 +96,12 @@ function Sidebar(props) {
           <Route path="/oncampus">
             <Oncampus />
           </Route>
+          <Route path="/offcampus">
+            <Offcampus />
+            </Route>
+  <Route>
+    <Route path="\Details"></Route>
+  </Route>
         </Switch>
       </Router>
     </div>
