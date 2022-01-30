@@ -7,6 +7,8 @@ import Oncampus from "./Oncampus.js";
 import Offcampus from "./Offcampus.js";
 import Eligible from "./Eligible.js";
 import Details from "./Details.js";
+import Formon from "./Formon.js";
+import Formoff from "./Formoff.js";
 function Menu({ sideData }) {
   return (
     <div className="menu">
@@ -25,6 +27,12 @@ function Menu({ sideData }) {
               </Route>
               <Route path="/oncampus">
                 <Oncampus />
+              </Route>
+              <Route path="/formon">
+                <Formon />
+              </Route>
+              <Route path="/formoff">
+                <Formoff />
               </Route>
               <Route path="/offcampus">
                 <Offcampus />

@@ -1,11 +1,19 @@
 import React from "react";
-
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import "./Admin.css";
+import { Button } from "@mui/material";
 function Offcampus() {
   return (
     <div>
       <h2>Offcampus</h2>
-
-      <table>
+      <div>
+        <Link to="/formoff">
+          <Button variant="contained" color="success">
+            New
+          </Button>
+        </Link>
+      </div>
+      {/* <table>
         <tr>
           <th>Company</th>
           <th>Contact</th>
@@ -41,7 +49,7 @@ function Offcampus() {
           <td>Giovanni Rovelli</td>
           <td>Italy</td>
         </tr>
-      </table>
+      </table> */}
     </div>
   );
 }

@@ -1,9 +1,20 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./Admin.css";
+import { Button } from "@mui/material";
+
 function Oncampus() {
-  return <div>
+  return (
+    <div>
       <h1>Oncampus</h1>
-<table>
+      <div>
+        <Link to="/formon">
+          <Button variant="contained" color="success">
+            New
+          </Button>
+        </Link>
+      </div>
+      {/* <table>
   <tr>
     <th>Company</th>
     <th>Contact</th>
@@ -39,8 +50,9 @@ function Oncampus() {
     <td>Giovanni Rovelli</td>
     <td>Italy</td>
   </tr>
-</table>
-  </div>;
+</table> */}
+    </div>
+  );
 }
 
 export default Oncampus;
