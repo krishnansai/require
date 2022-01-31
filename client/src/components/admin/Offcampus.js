@@ -13,7 +13,7 @@ function Offcampus() {
           </Button>
         </Link>
       </div>
-      {/* <table>
+      <table>
         <tr>
           <th>Company</th>
           <th>Contact</th>
@@ -49,7 +49,7 @@ function Offcampus() {
           <td>Giovanni Rovelli</td>
           <td>Italy</td>
         </tr>
-      </table> */}
+      </table>
     </div>
   );
 }

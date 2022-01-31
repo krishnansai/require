@@ -1,5 +1,6 @@
 import React from "react";
 import "./Admin.css";
+import { BorwserRouter as Router, Link } from "react-router-dom";
 import { useFormik } from "formik";
 function Formon() {
   const formik = useFormik({
@@ -94,7 +95,13 @@ function Formon() {
             Submit
           </button>
         </div>
+        
       </form>
+      <Link to="/oncampus">
+                  <button >
+                    cancel
+                  </button>
+                </Link>
     </div>
   );
 }

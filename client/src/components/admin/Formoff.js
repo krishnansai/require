@@ -1,5 +1,6 @@
 import React from "react";
 import "./Admin.css";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 function Formoff() {
   const formik = useFormik({
@@ -95,6 +96,11 @@ function Formoff() {
           </button>
         </div>
       </form>
+      <Link to="/offcampus">
+                  <button >
+                    cancel
+                  </button>
+                </Link>
     </div>
   );
 }
