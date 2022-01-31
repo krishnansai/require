@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import "./User.css";
 import "../../App.css";
 import HomeIcon from "@mui/icons-material/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Userside=()=>{
     return(
@@ -10,17 +10,15 @@ const Userside=()=>{
             <ul>
             <div className="sid-row">
             <HomeIcon />
-            <Button variant="contained" color="success">
+         <Link to="/campus">
+         <Button variant="contained" color="success">
               onCampus
             </Button>
-         
+            </Link>
         </div>
-            <div className="buttons">
-            <button>gyfgy</button>
-            </div>
-            </ul>
+          </ul>
         </div>
-    )
+    );
 
 }
 export default Userside;

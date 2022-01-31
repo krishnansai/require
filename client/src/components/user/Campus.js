@@ -1,12 +1,11 @@
+import React from 'react';
 
-
-function Campus(props)
- {
+function Campus() {
   return (
   <div>
-      <center><h3>History{props.sideData}</h3></center>
-  </div>
-  );
+    <h1>Hello Campus</h1>
+    </div>
+    );
 }
 
 export default Campus;

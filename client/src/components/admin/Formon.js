@@ -9,11 +9,11 @@ function Formon() {
       roll: "",
       package: "",
       location: "",
-      email: "",
+      email: "Nil",
     },
 
     onSubmit: (e) => {
-      console.log(e);
+      console.log(e.email);
       e.company = "";
       e.roll = "";
       e.package = "";

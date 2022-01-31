@@ -1,25 +1,31 @@
 import Userside from "./Userside";
 import "./User.css";
-import Campus from "./Campus";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function UserMain({ sideData }) {
-    return(<div>
-            <div className="userside">
-            <h1>UserMain{sideData}</h1>
-            </div>
-            <div>
-                <Router>
-            <Switch>
-          <Route path="/campus">
-            <Campus sideData={"callData"} />
-          </Route>
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Campus from "./Campus";
+
+function UserMain() {
+  return (
+    <div>
+      <div className="userside">
+        <h1>UserMain</h1>
+      </div>
+      <Router>
+        <div className="user">
+      <Userside />
+      <div>
+ 
+          <Switch>
+            <Route path="/campus">
+              <Campus />
+            </Route>
           </Switch>
-          </Router>
-            </div>
-            <Userside/>
-        </div>
-    );
-    
+      
+      </div>
+      </div>
+      </Router>
+
+    </div>
+  );
 }
 export default UserMain;
