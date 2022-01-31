@@ -9,7 +9,6 @@ function UserMain() {
     <div>
       <div className="userside">
         <h1>UserMain</h1>
-        <h1>hello</h1>
       </div>
       <Router>
         <div className="user">
