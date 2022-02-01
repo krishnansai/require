@@ -14,7 +14,38 @@ function Oncampus() {
           </Button>
         </Link>
       </div>
-      <table>
+      <div className="multi-card">
+        <Link to="/edit">
+          <Button>
+        <div class="card">
+          <h2>Soliton Technologies</h2>
+          <div class="container">
+            <h4>
+              <b>28-02-2022</b>
+            </h4>
+            <p>Back-end devloper</p>
+          </div>
+          <h5>6Lp</h5>
+        </div>
+        </Button>
+        </Link>
+        <Link to="/edit">
+          <Button>
+        <div class="card">
+          <h2>Software Ag</h2>
+          <div class="container">
+            <h4>
+              <b>Nil</b>
+            </h4>
+            <p>Devops</p>
+          </div>
+          <h5>10Lp</h5>
+        </div>
+        </Button>
+        </Link>
+      </div>
+     
+      {/* <table>
         <tr>
           <th>Company</th>
           <th>Contact</th>
@@ -50,7 +81,7 @@ function Oncampus() {
           <td>Giovanni Rovelli</td>
           <td>Italy</td>
         </tr>
-      </table>
+      </table> */}
     </div>
   );
 }

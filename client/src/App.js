@@ -1,59 +1,58 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import UserMain from "./components/user/UserMain";
-import { Button } from "@mui/material";
-import TextField from "@mui/material/TextField";
 import Menu from "./components/admin/Menu.js";
-import LogoutIcon from '@mui/icons-material/Logout';
-function App() {
-  const [login, setLogin] = React.useState(false);
-  return (
-    <div className="index">
-      <Router>
-      {login === false ? <div className="btn-login">
-                <TextField id="filled-basic" label="Gmail" variant="filled" />
-                <br />
-                <TextField
-                  id="standard-basic"
-                  label="Password"
-                  variant="standard"
-                />
-              </div>:null}
-        <div className="btn-group">
-          {login === false ? (
-            <div onClick={() => setLogin(true)}>
-              
-              <Link to="/admin">
-                <Button variant="contained">Admin Login</Button>
-              </Link>
-              <br />
-              <br />
-              <Link to="/user">
-                <Button variant="contained">User Login</Button>
-              </Link>
-            </div>
-          ) : (
-            <Link to="/" style={{textAlign:"end"}} onClick={() => setLogin(false)}>
-              <LogoutIcon />
+import "./components/main.css"
+
+const App = () => {
+    const [login, setLogin] = React.useState(false);
+
+    return (
+        <>
+    <div className="App">
+     <Router>
+     {login === false ? <div className="app">
+       <form className="form">
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" placeholder="nome@email.com.br" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password" />
+          </div>
+          <Link to="/admin" onClick={()=> setLogin(true)}>
+          <button className="primary">Admin Login</button>
+          </Link>
+        </form>
+        <Link to="/user" onClick={()=> setLogin(true)}>
+        <button className="secondary">User Login</button>
+        </Link>
+        </div>:(
+            <Link
+              to="/"
+              onClick={() => setLogin(false)}
+            >
+              Logout
             </Link>
           )}
-        </div>
-
-        <div className="App">
-          <Switch>
+       
+      <Switch>
             <Route path="/admin">
               <>
-              <Menu />
+                <Menu />
               </>
             </Route>
             <Route path="/user">
               <UserMain />
             </Route>
           </Switch>
-        </div>
-      </Router>
-    </div>
-  );
+          </Router>
+          </div>
+      </>
+    );
+  
 }
 
 export default App;

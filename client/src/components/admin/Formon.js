@@ -10,6 +10,8 @@ function Formon() {
       package: "",
       location: "",
       email: "Nil",
+      eligible: "",
+      date: "",
     },
 
     onSubmit: (e) => {
@@ -19,6 +21,8 @@ function Formon() {
       e.package = "";
       e.location = "";
       e.email = "";
+      e.eligible="";
+      e.date="";
     },
   });
   return (
@@ -36,6 +40,18 @@ function Formon() {
             onChange={formik.handleChange}
           />
           <br />
+          <div className="form-group">
+          <label>Date</label>
+          <br />
+          <input
+            required
+            type="number"
+            name="date"
+            value={formik.values.date}
+            onChange={formik.handleChange}
+          />
+        </div>
+        <br />
         </div>
         <div className="form-group">
           <br />
@@ -89,6 +105,19 @@ function Formon() {
           />
         </div>
         <br />
+        <br />
+        <div className="form-group">
+          <br />
+          <label>Eligible</label>
+          <br />
+          <input
+            required
+            type="text"
+            name="eligible"
+            value={formik.values.eligible}
+            onChange={formik.handleChange}
+          />
+        </div>
         <br />
         <div className="sub">
           <button className="btn btn-success" type="submit">

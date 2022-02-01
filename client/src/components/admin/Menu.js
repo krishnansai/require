@@ -4,11 +4,8 @@ import Sidebar from "./Sidebar.js";
 import "./Admin.css";
 import History from "./History.js";
 import Oncampus from "./Oncampus.js";
-import Offcampus from "./Offcampus.js";
-import Eligible from "./Eligible.js";
-import Details from "./Details.js";
 import Formon from "./Formon.js";
-import Formoff from "./Formoff.js";
+import Edit from "./Edit.js";
 function Menu({ sideData }) {
   return (
     <div className="menu">
@@ -31,20 +28,8 @@ function Menu({ sideData }) {
               <Route path="/formon">
                 <Formon />
               </Route>
-              <Route path="/formoff">
-                <Formoff />
-              </Route>
-              <Route path="/offcampus">
-                <Offcampus />
-              </Route>
-              <Route path="/eligible">
-                <Eligible />
-              </Route>
-              <Route path="/details">
-                <Details />
-              </Route>
-              <Route>
-                <Route path="\Details"></Route>
+              <Route path="/edit">
+                <Edit />
               </Route>
             </Switch>
           </div>

@@ -36,7 +36,7 @@ function Sidebar(props) {
                   </Button>
                 </Link>
               </div>
-              <div className="sid-row">
+              {/* <div className="sid-row">
                 <AddLinkIcon />
                 <Link to="/offcampus">
                   <Button variant="contained" color="success">
@@ -59,7 +59,7 @@ function Sidebar(props) {
                     Eligible
                   </Button>
                 </Link>
-              </div>
+              </div> */}
               <div className="sid-row">
                 <HistoryIcon />
                 <Link to="/history">
